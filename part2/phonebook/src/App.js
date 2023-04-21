@@ -79,7 +79,7 @@ const App = () => {
           }, 5000);
         })
         .catch(error => {
-          setNotificationMessage(`Could not create ${newName}`)
+          setNotificationMessage(error.response.data.error)
           setNotificationType(notificationTypes.error)
           setTimeout(() => {
             setNotificationMessage('')
